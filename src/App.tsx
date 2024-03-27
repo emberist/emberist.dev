@@ -23,7 +23,7 @@ const App = () => (
               target="_blank"
               href="https://github.com/emberist"
             >
-              github
+              GITHUB
             </a>
 
             <a
@@ -31,7 +31,7 @@ const App = () => (
               target="_blank"
               href="https://x.com/emberist"
             >
-              x.com
+              X.COM
             </a>
 
             {/* <a className="text-white hover:underline" href="#projects">

@@ -7,7 +7,7 @@ export const Emberist = () => (
     {words.map((letter, index) => (
       <motion.button
         key={index}
-        className="text-white hover:text-gray-200 text-6xl md:text-8xl font-extrabold"
+        className="text-white hover:text-gray-200 text-6xl md:text-8xl font-bold"
         initial={{ opacity: 0, y: -200 }}
         animate={{
           y: 0,
