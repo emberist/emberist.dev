@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const words = "emberist".split("");
 
 export const Emberist = () => (
-  <div className="flex">
+  <div className="flex gap-2">
     {words.map((letter, index) => (
       <motion.button
         key={index}

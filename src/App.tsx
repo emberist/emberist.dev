@@ -18,7 +18,23 @@ const App = () => (
           }}
         >
           <div className="flex gap-2">
-            <a className="text-white hover:underline" href="#projects">
+            <a
+              className="text-white hover:underline"
+              target="_blank"
+              href="https://github.com/emberist"
+            >
+              github
+            </a>
+
+            <a
+              className="text-white hover:underline"
+              target="_blank"
+              href="https://x.com/emberist"
+            >
+              x.com
+            </a>
+
+            {/* <a className="text-white hover:underline" href="#projects">
               projects
             </a>
 
@@ -32,7 +48,7 @@ const App = () => (
 
             <a className="text-white hover:underline" href="#">
               donate
-            </a>
+            </a> */}
           </div>
         </motion.div>
       </div>
@@ -71,7 +87,7 @@ const App = () => (
       </svg> */}
     </div>
 
-    <div id="projects" className="h-screen w-full bg-yellow-300"></div>
+    {/* <div id="projects" className="h-screen w-full bg-yellow-300"></div> */}
   </>
 );
 
