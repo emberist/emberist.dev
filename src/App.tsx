@@ -1,94 +1,50 @@
-import { motion } from "framer-motion";
-import { Emberist } from "./components/Emberist";
+import { AppCanvas } from "./components/Canvas";
+import { DimensionsProvider } from "./components/DimentionsProvider";
 
 const App = () => (
-  <>
-    <div className="bg-black flex flex-col w-full h-screen justify-center items-center py-9">
-      <div className="flex flex-col">
-        <Emberist />
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 2,
-              duration: 0.6,
-            },
-          }}
-        >
-          <div className="flex gap-2">
-            <a
-              className="text-white hover:underline"
-              target="_blank"
-              href="https://github.com/emberist"
-            >
-              GITHUB
-            </a>
-
-            <a
-              className="text-white hover:underline"
-              target="_blank"
-              href="https://x.com/emberist"
-            >
-              X.COM
-            </a>
-
-            {/* <a className="text-white hover:underline" href="#projects">
-              projects
-            </a>
-
-            <a className="text-white hover:underline" href="#">
-              github
-            </a>
-
-            <a className="text-white hover:underline" href="#">
-              contact
-            </a>
-
-            <a className="text-white hover:underline" href="#">
-              donate
-            </a> */}
-          </div>
-        </motion.div>
-      </div>
-      {/* <svg
-        viewBox="0 0 595 114"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        overflow="visible"
-      >
-        <path
-          id="curve"
-          d="M0.999908 112.999C143 104 202 0.998993 305 0.998993C408 0.998993 471 104 595 104"
-          fill="none"
-        />
-
-        <text fill="white" style={{ fontSize: 8 }}>
-          {duplicatedSlides.map((text, i) => (
-            <motion.textPath
-              href="#curve"
-              initial={{ startOffset: i * 20 + "%" }}
-              animate={{
-                startOffset: ["-50%", "110%"],
-                transition: {
-                  ease: "linear",
-                  duration: 6,
-                  repeat: Infinity,
-                  delay: i * 0.6,
-                },
-              }}
-              style={{ width: `${100 / slides.length}%`, flexShrink: 0 }}
-            >
-              {text}
-            </motion.textPath>
-          ))}
-        </text>
-      </svg> */}
+  <DimensionsProvider>
+    <div className=" flex flex-col w-full h-screen justify-center items-center">
+      <AppCanvas />
     </div>
 
-    {/* <div id="projects" className="h-screen w-full bg-yellow-300"></div> */}
-  </>
+    <div className="absolute top-0 left-0 w-screen h-screen pointer-events-none">
+      <div className="absolute flex gap-2 text-white bottom-[40px] left-[90px] text-sm">
+        <a
+          className=" text-white pointer-events-auto hover:underline"
+          target="_blank"
+          href="https://github.com/emberist"
+        >
+          github
+        </a>
+
+        <a
+          className=" text-white pointer-events-auto hover:underline"
+          target="_blank"
+          href="https://x.com/emberist"
+        >
+          x.com
+        </a>
+      </div>
+
+      <div className="absolute text-white bottom-[40px] right-[40px] text-sm">
+        created with ❤ using{" "}
+        <a
+          className="pointer-events-auto hover:underline"
+          href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+          target="_blank"
+        >
+          r3f
+        </a>
+      </div>
+
+      <a
+        className="absolute text-white top-[40px] left-[90px] text-sm"
+        href="#"
+      >
+        Find the secret...
+      </a>
+    </div>
+  </DimensionsProvider>
 );
 
 export default App;
