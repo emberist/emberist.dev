@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 
 const words = "emberist".toUpperCase().split("");
 
-export const Emberist: FC<{ onComplete: () => void }> = ({ onComplete }) => {
+export const Emberist: FC<{ onComplete?: () => void }> = () => {
   const [selectedLetters, setSelectedLetters] = useState<
     Record<string, boolean>
   >({});
